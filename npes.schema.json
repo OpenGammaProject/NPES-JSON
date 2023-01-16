@@ -1,0 +1,183 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$ref": "#/definitions/NuclearPhysicsEnergySpectra",
+	"definitions": {
+		"NuclearPhysicsEnergySpectra": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"formatVersion": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"deviceDataList": {
+					"$ref": "#/definitions/DeviceDataList"
+				},
+				"resultDataList": {
+					"$ref": "#/definitions/ResultDataList"
+				}
+			},
+			"required": [
+				"resultDataList"
+			],
+			"title": "NuclearPhysicsEnergySpectra",
+			"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy."
+		},
+		"DeviceDataList": {
+			"type": "object",
+			"additionalProperties": true,
+			"properties": {
+				"deviceName": {
+					"type": "string",
+					"description": "The name of the recording device.",
+					"maxLength": 200
+				},
+				"softwareName": {
+					"type": "string",
+					"description": "The name of the software that is used for recording.",
+					"maxLength": 200
+				}
+			},
+			"required": [],
+			"title": "DeviceDataList",
+			"description": "Metadata and other information about the recording device."
+		},
+		"ResultDataList": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"sampleInfo": {
+					"$ref": "#/definitions/SampleInfo"
+				},
+				"startTime": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "Unix timestamp of the recording start time."
+				},
+				"endTime": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "Unix timestamp of the recording end time."
+				},
+				"energySpectrum": {
+					"$ref": "#/definitions/EnergySpectrum"
+				},
+				"backgroundEnergySpectrum": {
+					"$ref": "#/definitions/EnergySpectrum"
+				}
+			},
+			"required": [],
+			"anyOf": [
+				{"required": ["energySpectrum"]},
+				{"required": ["backgroundEnergySpectrum"]}
+			],
+			"title": "ResultDataList",
+			"description": "The resulting measurement data from recording."
+		},
+		"EnergySpectrum": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"numberOfChannels": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "The number of channels or bins in the histogram."
+				},
+				"energyCalibration": {
+					"$ref": "#/definitions/EnergyCalibration"
+				},
+				"validPulseCount": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "The number of total valid pulses in the spectrum."
+				},
+				"measurementTime": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "Total measurement time in seconds."
+				},
+				"spectrum": {
+					"type": "array",
+					"items": {
+						"type": "integer",
+						"minimum": 0,
+						"description": "A single histogram bin from the spectrum."
+					},
+					"description": "The complete energy spectrum as an array of individual bins."
+				}
+			},
+			"required": [
+				"numberOfChannels",
+				"spectrum"
+			],
+			"title": "EnergySpectrum",
+			"description": "Contains all the data specific to the (background) energy spectrum."
+		},
+		"EnergyCalibration": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"polynomialOrder": {
+					"type": "integer",
+					"description": "Order of the polynomial used for calibration.",
+					"minimum": 1
+				},
+				"coefficients": {
+					"type": "array",
+					"items": {
+						"type": "number",
+						"description": "An individual calibration coefficient; can be any float."
+					},
+					"description": "All the coefficients needed for the n-poly calibration, sorted from lowest to highest order."
+				}
+			},
+			"required": [
+				"coefficients",
+				"polynomialOrder"
+			],
+			"title": "EnergyCalibration",
+			"description": "All the data used for energy calibration of the spectrum."
+		},
+		"SampleInfo": {
+			"type": "object",
+			"additionalProperties": true,
+			"properties": {
+				"name": {
+					"type": "string",
+					"maxLength": 200,
+					"description": "Name of the measured sample."
+				},
+				"location": {
+					"type": "string",
+					"maxLength": 200,
+					"description": "Location where the sample was collected."
+				},
+				"time": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "Unix timestamp when the sample was collected."
+				},
+				"weight": {
+					"type": "number",
+					"minimum": 0,
+					"description": "Weight of the sample in grams."
+				},
+				"volume": {
+					"type": "number",
+					"minimum": 0,
+					"description": "Volume of the sample in cubic centimeters."
+				},
+				"note": {
+					"type": "string",
+					"maxLength": 1000,
+					"description": "Some other arbitrary notes on the sample."
+				}
+			},
+			"required": [
+				"name"
+			],
+			"title": "SampleInfo",
+			"description": "All the data surrounding the sample itself."
+		}
+	}
+}
