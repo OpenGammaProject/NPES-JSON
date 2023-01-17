@@ -1,29 +1,27 @@
 {
-	"$schema": "http://json-schema.org/draft-06/schema#",
-	"$ref": "#/definitions/NuclearPhysicsEnergySpectra",
-	"definitions": {
-		"NuclearPhysicsEnergySpectra": {
-			"type": "object",
-			"additionalProperties": false,
-			"properties": {
-				"formatVersion": {
-					"type": "integer",
-					"minimum": 0
-				},
-				"deviceDataList": {
-					"$ref": "#/definitions/DeviceDataList"
-				},
-				"resultDataList": {
-					"$ref": "#/definitions/ResultDataList"
-				}
-			},
-			"required": [
-				"resultDataList"
-			],
-			"title": "NuclearPhysicsEnergySpectra",
-			"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy."
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://nuclearphoenix.xyz/example.schema.json",
+	"title": "Nuclear Physics Energy Spectra (NPES)",
+	"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy.",
+	"type": "object",
+	"properties": {
+		"formatVersion": {
+			"type": "integer",
+			"minimum": 0
 		},
-		"DeviceDataList": {
+		"deviceDataList": {
+			"$ref": "#/definitions/DeviceData"
+		},
+		"resultDataList": {
+			"$ref": "#/definitions/ResultData"
+		}
+	},
+	"required": [
+		"resultDataList"
+	],
+	"additionalProperties": false,
+	"definitions": {
+		"DeviceData": {
 			"type": "object",
 			"additionalProperties": true,
 			"properties": {
@@ -42,7 +40,7 @@
 			"title": "DeviceDataList",
 			"description": "Metadata and other information about the recording device."
 		},
-		"ResultDataList": {
+		"ResultData": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
@@ -50,14 +48,14 @@
 					"$ref": "#/definitions/SampleInfo"
 				},
 				"startTime": {
-					"type": "integer",
-					"minimum": 0,
-					"description": "Unix timestamp of the recording start time."
+					"type": "string",
+					"format": "date-time",
+					"description": "Date and time of the recording start, e.g. 2018-11-13T20:20:39+00:00."
 				},
 				"endTime": {
-					"type": "integer",
-					"minimum": 0,
-					"description": "Unix timestamp of the recording end time."
+					"type": "string",
+					"format": "date-time",
+					"description": "Date and time of the recording end, e.g. 2018-11-13T20:20:39+00:00."
 				},
 				"energySpectrum": {
 					"$ref": "#/definitions/EnergySpectrum"
@@ -103,6 +101,7 @@
 						"minimum": 0,
 						"description": "A single histogram bin from the spectrum."
 					},
+					"minitems": 1,
 					"description": "The complete energy spectrum as an array of individual bins."
 				}
 			},
@@ -119,7 +118,7 @@
 			"properties": {
 				"polynomialOrder": {
 					"type": "integer",
-					"description": "Order of the polynomial used for calibration.",
+					"description": "Order of the polynomial used for calibration, e.g. order 3 for a + bx +cx^2.",
 					"minimum": 1
 				},
 				"coefficients": {
@@ -128,6 +127,7 @@
 						"type": "number",
 						"description": "An individual calibration coefficient; can be any float."
 					},
+					"minitems": 1,
 					"description": "All the coefficients needed for the n-poly calibration, sorted from lowest to highest order."
 				}
 			},
@@ -153,9 +153,9 @@
 					"description": "Location where the sample was collected."
 				},
 				"time": {
-					"type": "integer",
-					"minimum": 0,
-					"description": "Unix timestamp when the sample was collected."
+					"type": "string",
+					"format": "date-time",
+					"description": "Date and time when the sample was collected, e.g. 2018-11-13T20:20:39+00:00."
 				},
 				"weight": {
 					"type": "number",
