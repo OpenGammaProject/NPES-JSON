@@ -10,7 +10,7 @@ Other than very simple CSV files there is no real widespread file format in gamm
 
 ### Benefits for developers
 
-- Open documentation on the complete data structure.
+- Complete and open documentation on the data structure.
 - Files can be validated before exporting or loading.
 - JSON can be parsed easily in every major programming language and it is much simpler to serialize/deserialize in JS or Python than XML.
 - Complete file compatability with every other program adhering to the same Schema.
