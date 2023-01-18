@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "http://nuclearphoenix.xyz/example.schema.json",
+	"$id": "https://opengammaproject.github.io/NPES-JSON/schema/npes.v1.schema.json",
 	"title": "Nuclear Physics Energy Spectra (NPES)",
 	"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy.",
 	"type": "object",
