@@ -11,3 +11,7 @@ Novel JSON schema targeted at storing **N**uclear **P**hysics **E**nergy **S**pe
 ### Benefits for end users
 
 ## Documentation
+
+The Schema(s) can be found in `schema`.
+
+For a full, human-readable documentation please head to https://opengammaproject.github.io/NPES-JSON/.
