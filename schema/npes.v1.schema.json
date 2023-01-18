@@ -21,7 +21,7 @@
 		}
 	},
 	"required": [
-		"formatVersion",
+		"schemaVersion",
 		"resultData"
 	],
 	"additionalProperties": false,
