@@ -1,0 +1,16 @@
+minify: true
+description_is_markdown: false
+expand_buttons: true
+show_breadcrumbs: true
+collapse_long_descriptions: true
+collapse_long_examples: true
+link_to_reused_ref: true
+recursive_detection_depth: 25
+default_from_description: false
+copy_css: true
+copy_js: true
+template_name: "js" #"flat", "md", "md_nested"
+show_toc: true
+examples_as_yaml: false
+with_footer: true
+footer_show_time: true
