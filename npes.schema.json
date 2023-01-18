@@ -7,17 +7,23 @@
 	"properties": {
 		"formatVersion": {
 			"type": "integer",
-			"minimum": 0
+			"minimum": 0,
+			"description": "Version number of the JSON Schema used.",
+			"title": "Format Version"
 		},
-		"deviceDataList": {
+		"deviceData": {
 			"$ref": "#/definitions/DeviceData"
 		},
-		"resultDataList": {
+		"sampleInfo": {
+			"$ref": "#/definitions/SampleInfo"
+		},
+		"resultData": {
 			"$ref": "#/definitions/ResultData"
 		}
 	},
 	"required": [
-		"resultDataList"
+		"formatVersion",
+		"resultData"
 	],
 	"additionalProperties": false,
 	"definitions": {
@@ -36,17 +42,16 @@
 					"maxLength": 200
 				}
 			},
-			"required": [],
-			"title": "DeviceDataList",
+			"required": [
+				"softwareName"
+			],
+			"title": "Device Data",
 			"description": "Metadata and other information about the recording device."
 		},
 		"ResultData": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"sampleInfo": {
-					"$ref": "#/definitions/SampleInfo"
-				},
 				"startTime": {
 					"type": "string",
 					"format": "date-time",
@@ -69,7 +74,7 @@
 				{"required": ["energySpectrum"]},
 				{"required": ["backgroundEnergySpectrum"]}
 			],
-			"title": "ResultDataList",
+			"title": "Result Data",
 			"description": "The resulting measurement data from recording."
 		},
 		"EnergySpectrum": {
@@ -109,7 +114,7 @@
 				"numberOfChannels",
 				"spectrum"
 			],
-			"title": "EnergySpectrum",
+			"title": "Energy Spectrum",
 			"description": "Contains all the data specific to the (background) energy spectrum."
 		},
 		"EnergyCalibration": {
@@ -135,7 +140,7 @@
 				"coefficients",
 				"polynomialOrder"
 			],
-			"title": "EnergyCalibration",
+			"title": "Energy Calibration",
 			"description": "All the data used for energy calibration of the spectrum."
 		},
 		"SampleInfo": {
@@ -176,7 +181,7 @@
 			"required": [
 				"name"
 			],
-			"title": "SampleInfo",
+			"title": "Sample Info",
 			"description": "All the data surrounding the sample itself."
 		}
 	}
