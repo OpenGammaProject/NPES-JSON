@@ -5,11 +5,10 @@
 	"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy.",
 	"type": "object",
 	"properties": {
-		"formatVersion": {
-			"type": "integer",
-			"minimum": 0,
-			"description": "Version number of the JSON Schema used.",
-			"title": "Format Version"
+		"schemaVersion": {
+			"const": "NPESv1",
+			"description": "Version string of the JSON Schema used.",
+			"title": "Schema Version"
 		},
 		"deviceData": {
 			"$ref": "#/definitions/DeviceData"
@@ -55,12 +54,14 @@
 				"startTime": {
 					"type": "string",
 					"format": "date-time",
-					"description": "Date and time of the recording start, e.g. 2018-11-13T20:20:39+00:00."
+					"description": "Date and time of the recording start.",
+					"examples": ["2018-11-13T20:20:39+00:00"]
 				},
 				"endTime": {
 					"type": "string",
 					"format": "date-time",
-					"description": "Date and time of the recording end, e.g. 2018-11-13T20:20:39+00:00."
+					"description": "Date and time of the recording end.",
+					"examples": ["2018-11-13T20:20:39+00:00"]
 				},
 				"energySpectrum": {
 					"$ref": "#/definitions/EnergySpectrum"
@@ -74,6 +75,10 @@
 				{"required": ["energySpectrum"]},
 				{"required": ["backgroundEnergySpectrum"]}
 			],
+			"dependencies": {
+				"startTime": ["endTime"],
+				"endTime": ["startTime"]
+			},
 			"title": "Result Data",
 			"description": "The resulting measurement data from recording."
 		},
@@ -83,20 +88,21 @@
 			"properties": {
 				"numberOfChannels": {
 					"type": "integer",
-					"minimum": 0,
-					"description": "The number of channels or bins in the histogram."
+					"minimum": 1,
+					"description": "The number of channels or bins in the histogram.",
+					"examples": [4096]
 				},
 				"energyCalibration": {
 					"$ref": "#/definitions/EnergyCalibration"
 				},
 				"validPulseCount": {
 					"type": "integer",
-					"minimum": 0,
+					"minimum": 1,
 					"description": "The number of total valid pulses in the spectrum."
 				},
 				"measurementTime": {
 					"type": "integer",
-					"minimum": 0,
+					"minimum": 1,
 					"description": "Total measurement time in seconds.",
 					"default": 1
 				},
@@ -161,7 +167,8 @@
 				"time": {
 					"type": "string",
 					"format": "date-time",
-					"description": "Date and time when the sample was collected, e.g. 2018-11-13T20:20:39+00:00."
+					"description": "Date and time when the sample was collected.",
+					"examples": ["2018-11-13T20:20:39+00:00"]
 				},
 				"weight": {
 					"type": "number",
