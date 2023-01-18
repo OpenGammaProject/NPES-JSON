@@ -106,7 +106,7 @@
 						"minimum": 0,
 						"description": "A single histogram bin from the spectrum."
 					},
-					"minitems": 1,
+					"minItems": 1,
 					"description": "The complete energy spectrum as an array of individual bins."
 				}
 			},
@@ -132,7 +132,7 @@
 						"type": "number",
 						"description": "An individual calibration coefficient; can be any float."
 					},
-					"minitems": 1,
+					"minItems": 1,
 					"description": "All the coefficients needed for the n-poly calibration, sorted from lowest to highest order."
 				}
 			},
