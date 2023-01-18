@@ -97,7 +97,8 @@
 				"measurementTime": {
 					"type": "integer",
 					"minimum": 0,
-					"description": "Total measurement time in seconds."
+					"description": "Total measurement time in seconds.",
+					"default": 1
 				},
 				"spectrum": {
 					"type": "array",
