@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "https://opengammaproject.github.io/NPES-JSON/schema/npes.v1.schema.json",
-	"title": "Nuclear Physics Energy Spectra (NPES)",
+	"title": "Nuclear Physics Energy Spectra (NPESv1)",
 	"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy.",
 	"type": "object",
 	"properties": {
@@ -130,7 +130,7 @@
 			"properties": {
 				"polynomialOrder": {
 					"type": "integer",
-					"description": "Order of the polynomial used for calibration, e.g. order 3 for a + bx +cx^2.",
+					"description": "Order of the polynomial used for calibration, e.g. order 2 for a + bx +cx^2.",
 					"minimum": 1
 				},
 				"coefficients": {
