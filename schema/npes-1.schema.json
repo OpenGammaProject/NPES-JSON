@@ -54,13 +54,13 @@
 				"startTime": {
 					"type": "string",
 					"format": "date-time",
-					"description": "Date and time of the recording start.",
+					"description": "Date and time of the recording start. Depends on 'endTime'!",
 					"examples": ["2018-11-13T20:20:39+00:00"]
 				},
 				"endTime": {
 					"type": "string",
 					"format": "date-time",
-					"description": "Date and time of the recording end.",
+					"description": "Date and time of the recording end. Depends on 'startTime'!",
 					"examples": ["2018-11-13T20:20:39+00:00"]
 				},
 				"energySpectrum": {
@@ -98,7 +98,7 @@
 				"validPulseCount": {
 					"type": "integer",
 					"minimum": 1,
-					"description": "The number of total valid pulses in the spectrum."
+					"description": "The number of total valid pulses in the spectrum, i.e. total counts - invalid counts."
 				},
 				"measurementTime": {
 					"type": "integer",
