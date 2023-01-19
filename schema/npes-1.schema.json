@@ -32,14 +32,12 @@
 			"properties": {
 				"deviceName": {
 					"type": "string",
-					"description": "The name of the recording device.",
-					"maxLength": 200
+					"description": "The name of the recording device."
 				},
 				"softwareName": {
 					"type": "string",
 					"description": "The name of the software that is used for recording.",
-					"minLength": 1,
-					"maxLength": 200
+					"minLength": 1
 				}
 			},
 			"required": [
@@ -157,12 +155,10 @@
 			"properties": {
 				"name": {
 					"type": "string",
-					"maxLength": 200,
 					"description": "Name of the measured sample."
 				},
 				"location": {
 					"type": "string",
-					"maxLength": 200,
 					"description": "Location where the sample was collected."
 				},
 				"time": {
@@ -183,7 +179,6 @@
 				},
 				"note": {
 					"type": "string",
-					"maxLength": 1000,
 					"description": "Some other arbitrary notes on the sample."
 				}
 			},
