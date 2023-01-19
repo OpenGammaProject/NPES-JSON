@@ -157,7 +157,6 @@
 			"properties": {
 				"name": {
 					"type": "string",
-					"minLength": 1,
 					"maxLength": 200,
 					"description": "Name of the measured sample."
 				},
@@ -188,9 +187,7 @@
 					"description": "Some other arbitrary notes on the sample."
 				}
 			},
-			"required": [
-				"name"
-			],
+			"required": [],
 			"title": "Sample Info",
 			"description": "All the data surrounding the sample itself."
 		}
