@@ -38,6 +38,7 @@
 				"softwareName": {
 					"type": "string",
 					"description": "The name of the software that is used for recording.",
+					"minLength": 1,
 					"maxLength": 200
 				}
 			},
@@ -156,6 +157,7 @@
 			"properties": {
 				"name": {
 					"type": "string",
+					"minLength": 1,
 					"maxLength": 200,
 					"description": "Name of the measured sample."
 				},
