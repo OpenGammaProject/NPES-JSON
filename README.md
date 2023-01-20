@@ -2,8 +2,6 @@
 
 Novel JSON Schema targeted at storing **N**uclear **P**hysics **E**nergy **S**pectra and meta data in a single file. Mainly used in gamma spectrometry for energy and background energy spectra, but it can be used for any kind of application where pulse height diagrams (i.e. histogram data) are used. This was originally inspired by the XML files used in the program [BecqMoni (Japanese MCA)](https://www.gammaspectacular.com/blue/software-downloads/becqmoni) and strives to be an open, well-documented, smaller-in-size and easier-to-parse file standard for universal use. Based on JSON Schema Draft-07.
 
-**Work In Progress...**
-
 ## Why
 
 Other than very simple CSV files there is no real widespread file format in gamma spectrometry, especially one that also allows saving other meta data on top of the spectrum. Few programs use the XML files proposed by BecqMoni, but this is not a standardized format, but more of an informal aggreement on some parts of that format. On top of that, due to the nature of XML, files can quickly get unreasonably big. To solve these issues, IMHO the best solution is to use JSON with a JSON Schema, which is much smaller, partly even simpler to parse and can be validated.
