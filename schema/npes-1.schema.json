@@ -68,7 +68,6 @@
 					"$ref": "#/definitions/EnergySpectrum"
 				}
 			},
-			"required": [],
 			"anyOf": [
 				{"required": ["energySpectrum"]},
 				{"required": ["backgroundEnergySpectrum"]}
@@ -181,7 +180,6 @@
 					"description": "Some other arbitrary notes on the sample."
 				}
 			},
-			"required": [],
 			"title": "Sample Info",
 			"description": "All the data surrounding the sample itself."
 		}
