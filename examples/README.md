@@ -6,6 +6,8 @@ Both of these are gamma spectra of different samples with different saved parame
 
 Converted from a BecqMoni XML. Reduced size from 18 kB to 2 kB (almost 90% saved).
 
+Only 256 channels, reduced size is exponentially larger for larger datasets.
+
 ## Example 2
 
 Energy spectrum and background energy spectrum imported from standard CSV files; added additional sample info and calibration.
