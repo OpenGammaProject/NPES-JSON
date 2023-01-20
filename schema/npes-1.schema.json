@@ -127,8 +127,9 @@
 			"properties": {
 				"polynomialOrder": {
 					"type": "integer",
-					"description": "Order of the polynomial used for calibration, e.g. order 2 for a + bx +cx^2.",
-					"minimum": 1
+					"description": "Order of the polynomial used for calibration, e.g. order 2 for a + bx +cx^2., i.e. number of coefficients minus 1.",
+					"minimum": 1,
+					"examples": [2]
 				},
 				"coefficients": {
 					"type": "array",
@@ -137,7 +138,8 @@
 						"description": "An individual calibration coefficient; can be any float."
 					},
 					"minItems": 1,
-					"description": "All the coefficients needed for the n-poly calibration, sorted from lowest to highest order."
+					"description": "All the coefficients needed for the n-poly calibration, sorted from lowest to highest order.",
+					"examples": [[-239,0.6,0.004]]
 				}
 			},
 			"required": [
