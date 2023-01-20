@@ -16,4 +16,6 @@ Size of NPES JSON: 19 kB
 
 --> Only 6% increase despite added calibration for both spectra and sample information.
 
+## Minimal
 
+Absolute minimum example with a single energy spectrum and a 256-bin histogram.
