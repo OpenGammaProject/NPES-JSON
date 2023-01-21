@@ -18,6 +18,8 @@ Size of NPES JSON: 19 kB
 
 --> Only 6% increase despite added calibration for both spectra and sample information.
 
+--> In [Gamma MCA](https://spectrum.nuclearphoenix.xyz), the JSON files also load significantly faster than the XML files, despite there being an additional file validation step. Sometimes by a good factor of 2.
+
 ## Minimal
 
 Absolute minimum example with a single energy spectrum and a 256-bin histogram.
