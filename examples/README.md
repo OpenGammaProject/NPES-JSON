@@ -8,7 +8,7 @@ Converted from a BecqMoni XML. Reduced size from 18 kB to 2 kB (almost 90% saved
 
 Only 256 channels, reduced size is exponentially larger for larger datasets.
 
-**-->** In [Gamma MCA](https://spectrum.nuclearphoenix.xyz), the JSON files also load significantly faster than the XML files, despite there being an additional file validation step. Sometimes by a good factor of 2.
+**-->** In [Gamma MCA](https://spectrum.nuclearphoenix.xyz), the JSON files also load significantly faster than the XML files, despite there being an additional file validation step. Sometimes by a good factor of 2. More software tests have to be done to confirm the speed advantage, though.
 
 ## Example 2
 
