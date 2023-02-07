@@ -32,3 +32,10 @@ Example files that validate can be found in `examples`.
 For a full, human-readable documentation please head to https://opengammaproject.github.io/NPES-JSON/.
 
 JSON Schema implementation docs can be found here: http://json-schema.org/implementations.html
+
+## Supported Software
+
+This is not a fully comprehensive list, but if you are using this data format, please feel free to add your program and create a PR.
+
+* Gamma MCA: [OpenGammaProject/Gamma-MCA](https://github.com/OpenGammaProject/Gamma-MCA)
+* Impulse by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse)
