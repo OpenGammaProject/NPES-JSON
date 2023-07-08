@@ -12,16 +12,17 @@ NPES JSON can also be used in web APIs to transfer spectra data between clients 
 ### Benefits for developers
 
 - Complete and open documentation on the data structure.
-- Files can be validated before exporting or loading.
-- Can be used to transfer data in an API-like setting.
-- JSON can be parsed easily in every major programming language and it is much simpler to serialize/deserialize in JS or Python than XML.
-- Complete file compatability with every other program adhering to the same Schema.
+- Files can be validated before exporting or importing/loading.
+- Can be used to transfer data in an API or similar use cases.
+- JSON can be parsed easily in every major programming language and it is absolutely trivial to serialize/deserialize in JavaScript or Python.
+- Complete file compatability with every other program adhering to this standard.
 
 ### Benefits for end users
 
-- Much smaller file sizes compared to XML files containing the same information.
-- Instant interoperability between different programs.
-- If something goes wrong, you can validate files to see what exact issues there are.
+- Much smaller file size compared to XML files containing the same information (around 10%).
+- Immediate interoperability between different programs - if it imports in one program you can be sure it will import in any other piece of software that supports this file type.
+- If something goes wrong, you can validate files to see exactly what issues there are.
+- You can easily manipulate the data in 3rd party software or your own scripts (especially in Python for example) due to it's simple structure.
 
 ## Documentation
 
