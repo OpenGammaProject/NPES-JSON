@@ -34,6 +34,8 @@ For a full, human-readable documentation please head to https://opengammaproject
 
 JSON Schema implementation docs can be found here: http://json-schema.org/implementations.html
 
+The documentation has been generated using [JSON Schema for Humans](https://github.com/coveooss/json-schema-for-humans) using the command `generate-schema-doc .\schema\ index.html --config-file .\jsfh-conf.yaml`.
+
 ## Supported Software
 
 This is not a fully comprehensive list, but if you are using this data format, please feel free to add your program and create a PR.
