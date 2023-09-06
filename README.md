@@ -36,6 +36,10 @@ JSON Schema implementation docs can be found here: http://json-schema.org/implem
 
 The documentation has been generated using [JSON Schema for Humans](https://github.com/coveooss/json-schema-for-humans) using the command `generate-schema-doc .\schema\ index.html --config-file .\jsfh-conf.yaml`.
 
+## Future Improvements
+
+- Making it possible to store multiple spectra in one file. At the moment this is only possible by appending multiple NPES JSON entries one after another in a single file. That works and it is valid JSON formatting, but it's neither officially supported nor documented.
+
 ## Supported Software
 
 This is not a fully comprehensive list, but if you are using this data format, please feel free to add your program and create a PR.
