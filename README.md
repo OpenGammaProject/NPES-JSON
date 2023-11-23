@@ -1,4 +1,5 @@
 # NPES-JSON
+
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/OpenGammaProject/NPES-JSON?style=flat-square) ![GitHub](https://img.shields.io/github/license/OpenGammaProject/NPES-JSON?style=flat-square) ![GitHub deployments](https://img.shields.io/github/deployments/OpenGammaProject/NPES-JSON/github-pages?label=web%20docs&style=flat-square)
 
 Novel JSON Schema targeted at storing **N**uclear **P**hysics **E**nergy **S**pectra and meta data in a single data object to be parsed by an API or stored in files. Mainly used in gamma spectrometry for energy and background energy spectra, but it can be used for any kind of application where pulse height diagrams (i.e. histogram data) are used. This was originally inspired by the XML files used in the program [BecqMoni (Japanese MCA)](https://www.gammaspectacular.com/blue/software-downloads/becqmoni) and strives to be an open, well-documented, smaller-in-size and easier-to-parse file standard for universal use. Based on JSON Schema Draft-07, therefore it can also be used to transfer data in an API context.
@@ -44,5 +45,5 @@ The documentation has been generated using [JSON Schema for Humans](https://gith
 
 This is not a fully comprehensive list, but if you are using this data format, please feel free to add your program and create a PR.
 
-* Gamma MCA: [OpenGammaProject/Gamma-MCA](https://github.com/OpenGammaProject/Gamma-MCA)
-* Impulse by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse)
+- Gamma MCA: [OpenGammaProject/Gamma-MCA](https://github.com/OpenGammaProject/Gamma-MCA)
+- Impulse by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse)
