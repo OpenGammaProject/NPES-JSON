@@ -1,30 +1,45 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"title": "Nuclear Physics Energy Spectra (NPESv1)",
-	"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy.",
+	"title": "Nuclear Physics Energy Spectra (NPESv2)",
+	"description": "JSON Schema to store nuclear physics spectrum data. Mostly used for gamma spectroscopy, but can be used for any kind of pulse height histogram data.",
 	"type": "object",
 	"properties": {
 		"schemaVersion": {
-			"const": "NPESv1",
+			"const": "NPESv2",
 			"description": "Version string of the JSON Schema used.",
 			"title": "Schema Version"
 		},
-		"deviceData": {
-			"$ref": "#/definitions/DeviceData"
-		},
-		"sampleInfo": {
-			"$ref": "#/definitions/SampleInfo"
-		},
-		"resultData": {
-			"$ref": "#/definitions/ResultData"
+		"data": {
+			"$ref": "#/definitions/Data"
 		}
 	},
 	"required": [
 		"schemaVersion",
-		"resultData"
+		"data"
 	],
 	"additionalProperties": false,
 	"definitions": {
+		"Data": {
+			"type": "array",
+			"additionalItems": false,
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"deviceData": {"$ref": "#/definitions/DeviceData"},
+					"sampleInfo": {"$ref": "#/definitions/SampleInfo"},
+					"resultData": {"$ref": "#/definitions/ResultData"}
+				},
+				"required": [
+					"resultData"
+				],
+				"title": "Data Package",
+				"description": "One complete package of data that contains the spectrum and optionally device and sample info."
+			},
+			"minItems": 1,
+			"title": "Data",
+			"description": "Array of data packages in order to store multiple spectra independently in the same file."
+		},
 		"DeviceData": {
 			"type": "object",
 			"additionalProperties": true,

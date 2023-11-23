@@ -37,9 +37,13 @@ JSON Schema implementation docs can be found here: http://json-schema.org/implem
 
 The documentation has been generated using [JSON Schema for Humans](https://github.com/coveooss/json-schema-for-humans) using the command `generate-schema-doc .\schema\ index.html --config-file .\jsfh-conf.yaml`.
 
+## Changes upon v1
+
+- It is now possible to store multiple spectra in one file in an array structure. There is basically no limit on the number of spectra, so you can for example use it to combine files or to store spectra in a data logger context as discussed in [#2](https://github.com/OpenGammaProject/NPES-JSON/discussions/2). This basically takes the v1 of the standard, puts a bracket around all instances except for `schemaVersion` and allows you to have multiple entries in that array.
+
 ## Future Improvements
 
-- Making it possible to store multiple spectra in one file. At the moment this is only possible by appending multiple NPES JSON entries one after another in a single file. That works and it is valid JSON formatting, but it's neither officially supported nor documented.
+- None at the moment :)
 
 ## Supported Software
 
