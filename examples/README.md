@@ -4,7 +4,7 @@ Some example files to have a look at the structure, make yourself familiar with 
 
 ## Example 1
 
-Converted from a BecqMoni XML, just a single data package with a single spectrum. Reduced size from 18 kB to 2 kB (almost 90% saved).
+Converted from a BecqMoni XML, just a single data package containing a single spectrum. Also minimized the JSON, this in total reduced the size from 18 kB to 2 kB (almost 90% saved).
 
 Only 256 channels, reduced size is exponentially larger for larger datasets.
 
