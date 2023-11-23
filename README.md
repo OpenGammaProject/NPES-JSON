@@ -31,9 +31,9 @@ The Schema(s) can be found in `schema`.
 
 Example files that validate can be found in `examples`.
 
-For a full, human-readable documentation please head to https://opengammaproject.github.io/NPES-JSON/.
+For a full, human-readable documentation please head to [https://opengammaproject.github.io/NPES-JSON/](https://opengammaproject.github.io/NPES-JSON/).
 
-JSON Schema implementation docs can be found here: http://json-schema.org/implementations.html
+JSON Schema implementation docs can be found here: [http://json-schema.org/implementations.html](http://json-schema.org/implementations.html)
 
 The documentation has been generated using [JSON Schema for Humans](https://github.com/coveooss/json-schema-for-humans) using the command `generate-schema-doc .\schema\ index.html --config-file .\jsfh-conf.yaml`.
 
