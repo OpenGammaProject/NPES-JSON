@@ -50,4 +50,4 @@ The documentation has been generated using [JSON Schema for Humans](https://gith
 This is not a fully comprehensive list, but if you are using this data format, please feel free to add your program and create a PR.
 
 - Gamma MCA: [OpenGammaProject/Gamma-MCA](https://github.com/OpenGammaProject/Gamma-MCA)
-- Impulse by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse)
+- Impulse by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse) (only supports [NPESv1](https://github.com/OpenGammaProject/NPES-JSON/tree/NPESv1) at the moment)
