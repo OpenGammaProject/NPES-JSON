@@ -10,6 +10,8 @@ Other than very simple CSV files there is no real widespread and universal file 
 
 NPES JSON can also be used in web APIs to transfer spectra data between clients and/or servers. Due to it being JSON, parsing is trivial in JavaScript and very easy in any other web-related programming language. In this context you can also validate API requests, which makes data handling a breeze and is overall extremely helpful. It's also straight-forward to implement in Python, which is used a lot in data science and pretty much copies the entire data structure of JSON with its dictionary data types.
 
+Due to its relative small size it is also suitable for embedded applications where you need more meta data than just the plain pulse height histogram (e.g. like a simple CSV file). It allows you to save all the relevant meta data in a compact format that can be opened with any of the supported programs.
+
 ### Benefits for developers
 
 - Complete and open documentation on the data structure.
