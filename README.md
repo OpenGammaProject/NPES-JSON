@@ -49,7 +49,13 @@ The documentation has been generated using [JSON Schema for Humans](https://gith
 
 ## Supported Software
 
-This is not a fully comprehensive list, but if you are using this data format, please feel free to add your program and create a PR.
+This is probably not a fully comprehensive list, so if you are using this data format, feel free to add your program and create a PR.
 
 - Gamma MCA: [OpenGammaProject/Gamma-MCA](https://github.com/OpenGammaProject/Gamma-MCA)
 - Impulse by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse) (only supports [NPESv1](https://github.com/OpenGammaProject/NPES-JSON/tree/NPESv1) at the moment)
+
+## Supported Hardware
+
+This is probably not a fully comprehensive list, so if you are using this data format, feel free to add your hardware/device and create a PR.
+
+- Open Gamma Detector: [OpenGammaProject/Open-Gamma-Detector](https://github.com/OpenGammaProject/Open-Gamma-Detector)
