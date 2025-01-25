@@ -49,13 +49,13 @@ The documentation has been generated using [JSON Schema for Humans](https://gith
 
 ## Supported Software
 
-This is probably not a fully comprehensive list, so if you are using this data format, feel free to add your program and create a PR.
+Software that can interface with the file format. This is probably not a fully comprehensive list, so if you are using this data format, feel free to add your program and create a PR.
 
 - Gamma MCA: [OpenGammaProject/Gamma-MCA](https://github.com/OpenGammaProject/Gamma-MCA)
-- Impulse by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse)
+- IMPULSE by Gammaspectacular: [ssesselmann/impulse](https://github.com/ssesselmann/impulse)
 
 ## Supported Hardware
 
-This is probably not a fully comprehensive list, so if you are using this data format, feel free to add your hardware/device and create a PR.
+Hardware that directly interfaces with the file format. This is probably not a fully comprehensive list, so if you are using this data format, feel free to add your hardware/device and create a PR.
 
 - Open Gamma Detector: [OpenGammaProject/Open-Gamma-Detector](https://github.com/OpenGammaProject/Open-Gamma-Detector)
