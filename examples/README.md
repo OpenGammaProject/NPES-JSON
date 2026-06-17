@@ -8,7 +8,7 @@ Converted from a BecqMoni XML, just a single data package containing a single sp
 
 Only 256 channels, reduced size is exponentially larger for larger datasets.
 
-**-->** In [Gamma MCA](https://spectrum.nuclearphoenix.xyz), the JSON files also load significantly faster than the XML files, despite there being an additional file validation step. Sometimes by a good factor of 2. More software tests have to be done to confirm the speed advantage, though.
+**-->** In [Gamma MCA](https://spectrum.nuclearphoenix.net), the JSON files also load significantly faster than the XML files, despite there being an additional file validation step. Sometimes by a good factor of 2. More software tests have to be done to confirm the speed advantage, though.
 
 ## Example 2
 
